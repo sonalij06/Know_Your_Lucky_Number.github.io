@@ -1,0 +1,121 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+/*header styling*/
+
+.header {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+}
+.again 
+{
+    height: 7vh;
+    width: 15vw;
+    font-size: 5vh;
+    font-weight: bold;
+    padding-left: 7vw;
+}
+.again button
+{
+    background-color: black;
+    color: aliceblue;
+        height: 7vh;
+}
+.limit
+{
+    height: 7vh;
+    width: 80vw;
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10vw;
+}
+
+
+/*main styling*/
+
+main{
+    height: 35vh;
+}
+.hea{
+    text-align: center;
+    font-size : 3vh;
+    margin-bottom: 5vh;
+    max-height: 35vh;
+}
+.head{
+    display: inline-block;
+    color: rgb(102, 51, 153);
+    margin-bottom: 8vh;
+    width: auto;
+}
+.rando{
+    background-color: rgb(102, 51, 153);
+    font-size: 15vh;
+    text-align: center;
+    height: 15vh;
+    width: 15vh;
+    position: relative;
+    left: 42vw;
+    bottom: 3vh;
+    /* background-color: rgb(0, 102, 255); */
+}
+
+
+/*footer styling*/
+
+footer{
+    height: 55vh;
+    position: relative;
+}
+.div1{
+    display: inline-block;
+    height: 50vh;
+    width: 49.5vw;
+    /* margin-top: 2vh; */
+}
+.div2{
+    display: inline-block;
+    height: 50vh;
+    width: 49vw;
+    position: absolute;
+    top: 0;
+}
+.input{
+    width: 10vw;
+    display: block;
+}
+.guess
+{
+    display: inline;
+    font-size: 5vh;
+    
+} 
+input{
+    margin-left: 15vw;
+    margin-top: 8vh;
+    height: 8vh;
+    width: 8vw;
+    border: 2px soldi black;
+}
+.div2 p
+{
+    font-size: 4vh;
+}
+.class{
+    padding: 2vh 4vw;
+    font-size: 4vh;
+    font-weight: bolder;
+}
+.check
+{
+    background-color: black;
+    color: aliceblue;
+}
