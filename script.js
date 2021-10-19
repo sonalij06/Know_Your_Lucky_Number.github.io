@@ -1,5 +1,5 @@
 'use strict';
-const secret = Math.trunc(Math.random() * 100) ;
+let secret = Math.trunc(Math.random() * 100) ;
 
         // document.querySelector('.rando').textContent = secret;
 
@@ -54,11 +54,13 @@ document.querySelector('.check').addEventListener('click',function() {
 
 document.querySelector('.again').addEventListener('click',function() {
     score = 50;
-    const secret = Math.trunc(Math.random() * 100) ;
+     secret = Math.trunc(Math.random() * 100) ;
 
-    document.querySelector('.rando').textContent = '?';
     document.querySelector('.message').textContent = 'Choose a Number...';
     document.querySelector('.sco').textContent = score;
+    document.querySelector('.rando').textContent = '?';
+
+  
 
     document.querySelector('.input').value = '';
     document.querySelector('html').style.backgroundColor = 'rgb(252, 252, 252)';
