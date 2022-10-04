@@ -16,17 +16,20 @@
 }
 .again
 {
-    height: 7vh;
     width: 15vw;
     font-size: 5vh;
     font-weight: bold;
-    padding-left: 7vw;
+    padding-left: 0vw;
+    position: relative;
+    bottom: -75vh;
+    left: 41.5vw;
+
 }
 .again button
 {
     background-color: black;
     color: aliceblue;
-        height: 7vh;
+    height: 7vh;
 }
 .limit
 {
@@ -34,8 +37,9 @@
     width: 80vw;
     font-size: 4vh;
     font-weight: bold;
-    text-align: right;
-    padding-right: 10vw;
+    position: fixed;
+    right: -21vw;
+    bottom: 40vw;
 }
 
 
@@ -55,6 +59,8 @@ main{
     color: rgb(102, 51, 153);
     margin-bottom: 8vh;
     width: auto;
+    position: relative;
+    top: -2.5vw;
 }
 .rando{
     background-color: rgb(102, 51, 153);
@@ -89,12 +95,17 @@ footer{
     height: 50vh;
     width: 49vw;
     position: absolute;
+
     top: 0;
     */
 }
+
+
 .input{
     width: 10vw;
     display: block;
+    position: relative;
+    right: -29vw;
 }
 .guess
 {
@@ -107,6 +118,7 @@ input{
     height: 8vh;
     width: 8vw;
     border: 2px soldi black;
+
 }
 .div2 p
 {
@@ -123,4 +135,11 @@ input{
     background-color: black;
     color: aliceblue;
     cursor: pointer;
+}
+
+.div4 p{
+    /*
+    text-align: center;
+    font-size: 5vh;
+    */
 }
