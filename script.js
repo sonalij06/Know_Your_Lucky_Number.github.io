@@ -15,19 +15,22 @@ document.querySelector('.check').addEventListener('click',function() {
     console.log(inp);
     if(inp == 0)
     {
-        document.querySelector('.message').textContent = 'Choose...';
+        document.querySelector('.message').textContent = 'Choose a number between 1 and 99';
     }
     else if(secret == inp)
     {
         document.querySelector('.message').textContent = 'Correct number ;))';
         document.querySelector('.rando').textContent = secret;
         document.querySelector('.check').style.visibility = "hidden";
-        if(score > high_score) {
-          document.querySelector('.high_score').textContent = score;
-          document.querySelector('html').style.backgroundColor= 'rgb(100, 255, 0)';
+
+        if(score > high_score){
+            high_score = score;
+            document.querySelector('.high_score').textContent = score;
         }
         document.getElementById("gameoverMenu").style.opacity = 1;
         document.getElementById("gameoverMenu").style.zIndex = 10;
+        console.log(high_score);
+        document.querySelector('html').style.backgroundColor= 'rgb(100, 255, 0)';
     }
     else
     {
@@ -39,6 +42,9 @@ document.querySelector('.check').addEventListener('click',function() {
           document.querySelector('.check').style.visibility = "hidden";
           document.getElementById("gameoverMenu").style.opacity = 1;
           document.getElementById("gameoverMenu").style.zIndex = 10;
+        }
+
+
         }
     }
     // else if(secret < inp)
@@ -58,7 +64,7 @@ document.querySelector('.check').addEventListener('click',function() {
     //     if(score < 1)
     //     document.querySelector('.message').textContent = 'you lose :((';
     // }
-});
+);
 
 
 document.querySelector('.again').addEventListener('click',function() {
