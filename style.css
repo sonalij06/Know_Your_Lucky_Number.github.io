@@ -124,3 +124,16 @@ input{
     color: aliceblue;
     cursor: pointer;
 }
+
+#gameoverMenu {
+  transition: opacity 0.5s;
+  position: fixed;
+  background-color: grey;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  z-index: -10;
+  padding: 65px;
+  opacity: 0;
+  margin-top:20px
+}
