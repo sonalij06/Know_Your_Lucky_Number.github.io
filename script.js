@@ -14,15 +14,18 @@ document.querySelector('.check').addEventListener('click',function() {
     console.log(inp);
     if(inp == 0)
     {
-        document.querySelector('.message').textContent = 'Choose...';
+        document.querySelector('.message').textContent = 'Choose a number between 1 and 99';
     }
     else if(secret == inp)
     {
         document.querySelector('.message').textContent = 'Correct number ;))';
         document.querySelector('.rando').textContent = secret;
         document.querySelector('.check').style.visibility = "hidden";
-        if(score > high_score)
-        document.querySelector('.high_score').textContent = score;
+        if(score > high_score){
+            high_score = score;
+            document.querySelector('.high_score').textContent = score;
+        }
+        console.log(high_score);
         document.querySelector('html').style.backgroundColor= 'rgb(100, 255, 0)';
     }
     else
@@ -33,6 +36,9 @@ document.querySelector('.check').addEventListener('click',function() {
         if(score < 1){
           document.querySelector('.message').textContent = 'you lose :((';
           document.querySelector('.check').style.visibility = "hidden";
+        }
+        
+
         }
     }
     // else if(secret < inp)
@@ -52,12 +58,12 @@ document.querySelector('.check').addEventListener('click',function() {
     //     if(score < 1)
     //     document.querySelector('.message').textContent = 'you lose :((';
     // }
-});
+);
 
 
 document.querySelector('.again').addEventListener('click',function() {
     score = 50;
-     secret = Math.trunc(Math.random() * 100) ;
+    secret = Math.trunc(Math.random() * 100) ;
 
     document.querySelector('.message').textContent = 'Choose a Number...';
     document.querySelector('.sco').textContent = score;
