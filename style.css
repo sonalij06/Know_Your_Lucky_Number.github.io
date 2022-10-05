@@ -48,7 +48,7 @@ main{
     text-align: center;
     font-size : 3vh;
     margin-bottom: 5vh;
-    max-height: 35vh;
+    /* max-height: 35vh; */
 }
 .head{
     display: inline-block;
@@ -60,7 +60,8 @@ main{
     background-color: rgb(102, 51, 153);
     font-size: 15vh;
     text-align: center;
-    width: 15vh;
+    width: 20vh;
+    height: auto;
     position: relative;
     margin: auto;
     bottom: 3vh;
@@ -99,6 +100,8 @@ footer{
 .guess
 {
     font-size: 5vh;
+    padding-top: 5%;
+    height: auto;
     text-align: center;
 }
 input{
@@ -123,6 +126,29 @@ input{
     background-color: black;
     color: aliceblue;
     cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+    .div1 {
+        width: 80%;
+    }
+
+    .check {
+        width: 80%;
+    }
+
+    .input {
+        width: 80%;
+    }
+
+    .rando {
+        width: 60%;
+    }
+
+    .guess {
+        padding-top: 25%;
+    }
 }
 
 #gameoverMenu {
