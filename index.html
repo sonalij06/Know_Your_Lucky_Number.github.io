@@ -16,7 +16,7 @@
 
     <header>
         <nav class="header">
-            <div class="limit">Between 1 - 99</div>
+            <div id="numRangeHeader" class="limit">Between 1 - 99</div>
         </nav>
     </header>
 
@@ -29,13 +29,26 @@
 
 
         </div>
-        <div id="gameoverMenu">
+        <div id="gameoverMenu" class="menuOverlay">
+          <div class="modifyParamClass" style="padding-left: 0px;margin-left: 40%;width: 20%;">
+              <button style="cursor: pointer">Settings</button>
+          </div>
           <div class="again" style="padding-left: 0px;margin-left: 40%;width: 20%;">
               <button style="cursor: pointer">Again!!</button>
           </div>
           <div class="div2">
             <p class="score">Score : <span class="sco">50</span> </p>
             <p class="high">Highscore : <span class="high_score">0</span></p>
+          </div>
+        </div>
+
+        <div id="paramMenu" class="menuOverlay">
+          <label> Number range </label>
+          <br>
+          <input id="sliderVal" type="range" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+          <output style="vertical-align: 50%;">100</output>
+          <div class="secondAgainButton" style="padding-left: 0px;margin-left: 40%;width: 20%;margin-top: 15px;">
+              <button style="cursor: pointer">Again!!</button>
           </div>
         </div>
 
@@ -46,7 +59,7 @@
 
             <p class="guess">Guess your lucky number...</p>
 
-            <input class="input" type="number" minlength="1" maxlength="2">
+            <input id="inputNumber" class="input" type="number" minlength="1" maxlength="2">
 
             <input type="button" class="check input" value="check!!">
 

@@ -22,6 +22,22 @@
     font-weight: bold;
     padding-left: 7vw;
 }
+
+.modifyParamClass {
+    width: 15vw;
+    font-size: 5vh;
+    font-weight: bold;
+    padding-left: 7vw;
+    margin-bottom: 5px;
+    height: 7vh;
+}
+
+.modifyParamClass button {
+  color: aliceblue;
+  height: 7vh;
+  background-color: black;
+}
+
 .again button
 {
     background-color: black;
@@ -125,7 +141,7 @@ input{
     cursor: pointer;
 }
 
-#gameoverMenu {
+.menuOverlay {
   transition: opacity 0.5s;
   position: fixed;
   background-color: grey;
