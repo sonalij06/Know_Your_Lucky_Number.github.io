@@ -11,7 +11,7 @@ let high_score = 0;
 
 // console.log(Number(document.querySelector('.high').value));
 document.querySelector('.check').addEventListener('click',function() {
-    let inp =Number(document.querySelector('input').value);
+    let inp =Number(document.querySelector('#inputNumber').value);
     console.log(inp);
     if(inp == 0)
     {
@@ -43,7 +43,7 @@ document.querySelector('.check').addEventListener('click',function() {
           document.getElementById("gameoverMenu").style.opacity = 1;
           document.getElementById("gameoverMenu").style.zIndex = 10;
         }
-        
+
 
         }
     }
@@ -70,16 +70,35 @@ document.querySelector('.check').addEventListener('click',function() {
 document.querySelector('.again').addEventListener('click',function() {
     score = 50;
     secret = Math.trunc(Math.random() * 100) ;
+    restartGame();
+});
 
+document.querySelector('.secondAgainButton').addEventListener('click',function() {
+    score = 50;
+    var maxRange = document.getElementById("sliderVal").value;
+    secret = Math.trunc(Math.random() * maxRange + 1) ;
+    document.getElementById("numRangeHeader").innerHTML = "Between " + "1 - " + maxRange;
+    restartGame();
+});
+
+function restartGame(){
+  document.getElementById("gameoverMenu").style.opacity = 0;
+  document.getElementById("gameoverMenu").style.zIndex = -10;
+  document.getElementById("paramMenu").style.opacity = 0;
+  document.getElementById("paramMenu").style.zIndex = -10;
+  document.querySelector('.message').textContent = 'Choose a Number...';
+  document.querySelector('.sco').textContent = score;
+  document.querySelector('.rando').textContent = '?';
+  document.querySelector('.check').style.visibility = "visible";
+
+
+  document.querySelector('.input').value = '';
+  document.querySelector('html').style.backgroundColor = 'rgb(252, 252, 252)';
+}
+
+document.querySelector('.modifyParamClass').addEventListener('click',function() {
     document.getElementById("gameoverMenu").style.opacity = 0;
     document.getElementById("gameoverMenu").style.zIndex = -10;
-    document.querySelector('.message').textContent = 'Choose a Number...';
-    document.querySelector('.sco').textContent = score;
-    document.querySelector('.rando').textContent = '?';
-    document.querySelector('.check').style.visibility = "visible";
-
-
-    document.querySelector('.input').value = '';
-    document.querySelector('html').style.backgroundColor = 'rgb(252, 252, 252)';
-
+    document.getElementById("paramMenu").style.opacity = 1;
+    document.getElementById("paramMenu").style.zIndex = 10;
 });
